@@ -1,6 +1,6 @@
 <template>
-  <NLayout class="layout" has-sider>
-    <NLayoutSider
+  <n-layout class="layout" has-sider>
+    <n-layout-sider
       show-trigger
       @collapse="collapsed = true"
       @expand="collapsed = false"
@@ -12,13 +12,13 @@
       class="layout-sider"
     >
       <p>sider</p>
-    </NLayoutSider>
-    <NLayout>
-      <NLayoutContent>
+    </n-layout-sider>
+    <n-layout>
+      <n-layout-content>
         <p>content</p>
-      </NLayoutContent>
-    </NLayout>
-  </NLayout>
+      </n-layout-content>
+    </n-layout>
+  </n-layout>
 </template>
 
 <script setup>
