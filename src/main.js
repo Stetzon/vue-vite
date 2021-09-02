@@ -8,12 +8,14 @@ import 'vfonts/Lato.css' // sans
 import 'vfonts/FiraCode.css' // monospace
 
 import HelloWorld from './components/HelloWorld.vue';
+import Dashboard from './components/Dashboard.vue';
 
 const About = { template: '<h1>About</h1>' }
 
 const routes = [
   { path: '/', component: HelloWorld, props: {msg : "Hello Vue 3 + Vite"} },
   { path: '/about', component: About },
+  { path: '/dashboard', component: Dashboard },
 ]
 
 const router = createRouter({
