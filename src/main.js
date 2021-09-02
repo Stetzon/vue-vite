@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import naive from 'naive-ui'
 import App from './App.vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
+import { createStore } from 'vuex'
 
 import 'vfonts/Lato.css' // sans
 import 'vfonts/FiraCode.css' // monospace
@@ -20,7 +21,14 @@ const router = createRouter({
   routes,
 })
 
+// Create a new store instance.
+const store = createStore({
+  state () {},
+  mutations: {}
+})
+
 createApp(App)
     .use(router)
+    .use(store)
     .use(naive)
     .mount('#app')
