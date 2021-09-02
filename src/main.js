@@ -1,15 +1,13 @@
 import { createApp } from 'vue'
 import naive from 'naive-ui'
 import App from './App.vue'
-// import VueRouter from 'vue-router';
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import 'vfonts/Lato.css'
-// Monospace Font
-// import 'vfonts/FiraCode.css'
+import 'vfonts/Lato.css' // sans
+import 'vfonts/FiraCode.css' // monospace
+
 import HelloWorld from './components/HelloWorld.vue';
 
-// const HelloWorld = { component: HelloWorld }
 const About = { template: '<h1>About</h1>' }
 
 const routes = [
