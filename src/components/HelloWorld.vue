@@ -1,11 +1,16 @@
 <script setup>
 import { ref } from 'vue'
+import { useMessage } from 'naive-ui'
 
 defineProps({
   msg: String
 })
 
 const count = ref(0)
+
+const message = useMessage()
+const hello = () => { message.success('Hello!') } 
+
 </script>
 
 <template>
@@ -26,7 +31,11 @@ const count = ref(0)
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
   </p>
 
-  <button type="button" @click="count++">count is: {{ count }}</button>
+  <n-space justify="center">
+    <n-button @click="count++"> count is: {{ count }} </n-button>
+    <n-button @click="hello"> Say Hello </n-button>
+  </n-space>
+
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
