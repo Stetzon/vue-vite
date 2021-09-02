@@ -3,7 +3,6 @@
     <n-dialog-provider>
       <n-notification-provider>
         <n-message-provider>
-          <img alt="Vue logo" src="./assets/logo.png" />
           <router-view></router-view>
         </n-message-provider>
       </n-notification-provider>

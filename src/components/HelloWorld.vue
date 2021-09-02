@@ -14,6 +14,8 @@ const hello = () => { message.success('Hello!') }
 </script>
 
 <template>
+  <img alt="Vue logo" src="../assets/logo.png" />
+
   <h1>{{ msg }}</h1>
 
   <p>
