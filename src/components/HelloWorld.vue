@@ -45,6 +45,10 @@ const hello = () => { message.success('Hello!') }
 </template>
 
 <style scoped>
+img {
+  margin-top: 50px;
+}
+
 a {
   color: #42b983;
 }
