@@ -19,10 +19,17 @@
     </n-layout-sider>
     <n-layout>
       <n-layout-header bordered>
-        <n-menu mode="horizontal" :options="menuOptions" />
+        <Header />
       </n-layout-header>
-      <n-layout-content>
-        <p>content</p>
+      <n-layout-content embedded content-style="padding: 24px;">
+        <n-card>
+          <p>content</p>
+          <p>
+            <n-icon size="40">
+              <book-icon />
+            </n-icon>
+          </p>
+        </n-card>
       </n-layout-content>
     </n-layout>
   </n-layout>
@@ -36,6 +43,7 @@ import {
   Person12Filled as PersonIcon,
   Bug16Filled as BugIcon,
 } from "@vicons/fluent";
+import Header from "./Header.vue";
 
 const collapsed = ref(false);
 
@@ -66,7 +74,7 @@ const menuOptions = [
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
 .layout {
   display: flex;
   flex-direction: row;
@@ -78,5 +86,8 @@ const menuOptions = [
   position: relative;
   z-index: 13;
   transition: all 0.2s ease-in-out;
+}
+.n-layout-content {
+  min-height: calc(100vh - 51px); // header height
 }
 </style>
